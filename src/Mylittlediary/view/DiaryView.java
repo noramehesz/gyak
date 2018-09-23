@@ -61,6 +61,8 @@ public class DiaryView extends JFrame {
 	public double testmodi;
 	//commit name: second in code 
 	
+	//megegy tesztes change deploy miatt 
+	
 	
 	
 	public void hozzaad(){
