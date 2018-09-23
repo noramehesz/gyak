@@ -63,7 +63,7 @@ public class DiaryView extends JFrame {
 	
 	//megegy tesztes change deploy miatt 
 	
-	
+	int develope ; 
 	
 	public void hozzaad(){
 		Notes uj = new Notes(txtNote.getText(), txtDatum.getText());
