@@ -55,8 +55,11 @@ public class DiaryView extends JFrame {
 	private JTextField txtDatumkeres;
 	private JTable listatable;
 	private JTextArea txtrJegyzet = new JTextArea();
+	
+	//git changes 
 	public int abcsefg;
 	public double testmodi;
+	//commit name: second in code 
 	
 	
 	
