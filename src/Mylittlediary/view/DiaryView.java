@@ -37,7 +37,7 @@ import javax.swing.JTable;
 
 public class DiaryView extends JFrame {
 	
-	private Diary diary;
+	private Diary diary; //valami apro pici vï¿½ltoztatï¿½s kell ebbe ide bele
 	private JPanel mainPanel = new JPanel();
 	private JButton btnJegyzetek = new JButton("Jegyzetek ");
 	private JLabel lblMen = new JLabel("Men\u00FC");
@@ -55,6 +55,8 @@ public class DiaryView extends JFrame {
 	private JTextField txtDatumkeres;
 	private JTable listatable;
 	private JTextArea txtrJegyzet = new JTextArea();
+	public int abcsefg;
+	public double testmodi;
 	
 	
 	
@@ -63,15 +65,15 @@ public class DiaryView extends JFrame {
 		int talalat=0;
 		for(int i = 0; i< diary.notes.size(); i++){
 			if(diary.notes.get(i).getDate().equals(txtDatum.getText())){
-				varninglbl.setText("Ilyened már van, csak módosítani lehet");		
+				varninglbl.setText("Ilyened mï¿½r van, csak mï¿½dosï¿½tani lehet");		
 				talalat=1;
 			}
 			
 		}
 		if (talalat==0) {
 			txtNote.setText("");
-			txtDatum.setText("éééé.hh.nn.");
-			varninglbl.setText("Hozzáadva");
+			txtDatum.setText("ï¿½ï¿½ï¿½ï¿½.hh.nn.");
+			varninglbl.setText("Hozzï¿½adva");
 		diary.addNote(uj);	
 		try {
 			diary.saveToFile("note.txt");
@@ -169,14 +171,14 @@ public class DiaryView extends JFrame {
 		getContentPane().add(mainPanel, "mainpanel");
 		
 		
-		JButton btnNewButton = new JButton("Jegyzet hozzáadása");
+		JButton btnNewButton = new JButton("Jegyzet hozzï¿½adï¿½sa");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CardLayout cl
 				= (CardLayout)(getContentPane().getLayout());
 			    cl.show(getContentPane(), "notepanel");
-			    txtNote.setText("Írd be a jegyzeted");
-			    txtDatum.setText("éééé.hh.nn."); //efefed
+			    txtNote.setText("ï¿½rd be a jegyzeted");
+			    txtDatum.setText("ï¿½ï¿½ï¿½ï¿½.hh.nn."); //efefed
 			    varninglbl.setText("");
 			    
 			}
@@ -266,7 +268,7 @@ public class DiaryView extends JFrame {
 		
 		
 		txtDatum = new JTextField();
-		txtDatum.setText("éééé.hh.nn.");
+		txtDatum.setText("ï¿½ï¿½ï¿½ï¿½.hh.nn.");
 		txtDatum.setColumns(10);
 		txtDatum.addFocusListener(new FocusListener() {
 			
@@ -539,8 +541,8 @@ public class DiaryView extends JFrame {
 						return false;
 					}
 				};
-				model.addColumn("Dátum");
-				model.addColumn("Bejegyzés");
+				model.addColumn("Dï¿½tum");
+				model.addColumn("Bejegyzï¿½s");
 					
 				
 				listatable = new JTable(model);
