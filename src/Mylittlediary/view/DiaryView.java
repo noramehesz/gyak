@@ -50,6 +50,9 @@ public class DiaryView extends JFrame {
 	private JLabel lblDtum_1 = new JLabel("D\u00E1tum:");
 	private JLabel lblJegzyeteid = new JLabel("Jegyzeteid:");
 	
+	//subtest miatt teszek ide kommenteket 
+	//subsubsubsubsubususbsub
+	
 	public JTextField txtDatum;
 	private JTextArea txtNote;
 	private JTextField txtDatumkeres;
