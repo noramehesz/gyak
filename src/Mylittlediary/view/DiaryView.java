@@ -33,6 +33,7 @@ import javax.swing.JTextArea;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import java.awt.Component;
 
 
 public class DiaryView extends JFrame {
