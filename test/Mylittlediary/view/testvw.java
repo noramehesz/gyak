@@ -15,15 +15,15 @@ public class testvw {
 		
 		
 		//txtDatum
-		Assert.assertEquals("ÈÈÈÈ.hh.nn." , dv.txtDatum.getText());  
+		//Assert.assertEquals("ÈÈÈÈ.hh.nn." , dv.txtDatum.getText());  
 		 
 		//try {
-			Thread.sleep(5000);   //5 mp van belekattintani a txtDatum mezobe, hogy ellenorizzuk h eltunik e mintas belole
+		//	Thread.sleep(5000);   //5 mp van belekattintani a txtDatum mezobe, hogy ellenorizzuk h eltunik e mintas belole
 		//} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 		//	e.printStackTrace();
 		//}
-		Assert.assertEquals("" , dv.txtDatum.getText());   //hozz√°ad√°skot a d√°tum mez≈ën kattintva elt≈±nik az "√©√©√©√©.hh.nn."
+		Assert.assertEquals("eeee.hh.nn." , dv.txtDatum.getText());   
 	}
 
 }

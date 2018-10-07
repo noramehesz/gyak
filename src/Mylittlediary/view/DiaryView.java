@@ -81,7 +81,7 @@ public class DiaryView extends JFrame {
 		}
 		if (talalat==0) {
 			txtNote.setText("");
-			txtDatum.setText("éééé.hh.nn.");
+			txtDatum.setText("eeee.hh.nn.");
 			varninglbl.setText("Hozzáadva");
 		diary.addNote(uj);	
 		try {
@@ -103,13 +103,13 @@ public class DiaryView extends JFrame {
 		int talalat=0;
 		for(int i = 0; i< diary.notes.size(); i++){
 			if(diary.notes.get(i).getDate().equals(txtDatumkeres.getText())){
-				txtrJegyzet.setText(diary.notes.get(i).getEventName());			
+				getTxtrJegyzet().setText(diary.notes.get(i).getEventName());			
 				talalat=1;
 			}
 			
 		}
 		if (talalat==0) {
-			txtrJegyzet.setText("Nincs az adott napra programod!");			
+			getTxtrJegyzet().setText("Nincs az adott napra programod!");			
 		}
 		
 	}
@@ -123,7 +123,7 @@ public class DiaryView extends JFrame {
 	
 		}
 		txtDatumkeres.setText("eeee.hh.nn.");
-		txtrJegyzet.setText("");
+		getTxtrJegyzet().setText("");
 		try {
 			diary.saveToFile("note.txt");
 		} catch (FileNotFoundException e1) {
@@ -140,7 +140,7 @@ public class DiaryView extends JFrame {
 	public void modosit(){
 		for(int i = 0; i< diary.notes.size(); i++){
 			if(diary.notes.get(i).getDate().equals(txtDatumkeres.getText())){
-				diary.notes.get(i).setEventName(txtrJegyzet.getText());
+				diary.notes.get(i).setEventName(getTxtrJegyzet().getText());
 			}
 	
 		}
@@ -187,7 +187,7 @@ public class DiaryView extends JFrame {
 				= (CardLayout)(getContentPane().getLayout());
 			    cl.show(getContentPane(), "notepanel");
 			    txtNote.setText("Írd be a jegyzeted");
-			    txtDatum.setText("éééé.hh.nn."); //efefed
+			    txtDatum.setText("eeee.hh.nn."); //efefed
 			    varninglbl.setText("");
 			    
 			}
@@ -201,7 +201,7 @@ public class DiaryView extends JFrame {
 				= (CardLayout)(getContentPane().getLayout());
 			    cl.show(getContentPane(), "findpanel");
 			    txtDatumkeres.setText("eeee.hh.nn.");
-			    txtrJegyzet.setText("Itt lesz a jegyzeted");
+			    getTxtrJegyzet().setText("Itt lesz a jegyzeted");
 			   
 			}
 		});
@@ -277,7 +277,7 @@ public class DiaryView extends JFrame {
 		
 		
 		txtDatum = new JTextField();
-		txtDatum.setText("ï¿½ï¿½ï¿½ï¿½.hh.nn.");
+		txtDatum.setText("eeee.hh.nn.");
 		txtDatum.setColumns(10);
 		txtDatum.addFocusListener(new FocusListener() {
 			
@@ -451,10 +451,10 @@ public class DiaryView extends JFrame {
 		);
 		
 		
-	    txtrJegyzet.setLineWrap(true);
-	    txtrJegyzet.setWrapStyleWord(true);
-		txtrJegyzet.setText("jegyzet");
-		scrollPane.setViewportView(txtrJegyzet);
+	    getTxtrJegyzet().setLineWrap(true);
+	    getTxtrJegyzet().setWrapStyleWord(true);
+		getTxtrJegyzet().setText("jegyzet");
+		scrollPane.setViewportView(getTxtrJegyzet());
 		findPanel.setLayout(gl_findPanel);
 		
 		
@@ -583,6 +583,18 @@ public class DiaryView extends JFrame {
 		asd.setBounds(100, 100, 500, 500);
 		asd.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		asd.setVisible(true);
+	}
+
+
+
+	public JTextArea getTxtrJegyzet() {
+		return txtrJegyzet;
+	}
+
+
+
+	public void setTxtrJegyzet(JTextArea txtrJegyzet) {
+		this.txtrJegyzet = txtrJegyzet;
 	}
 }
 
