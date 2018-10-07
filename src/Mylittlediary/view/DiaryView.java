@@ -74,15 +74,15 @@ public class DiaryView extends JFrame {
 		int talalat=0;
 		for(int i = 0; i< diary.notes.size(); i++){
 			if(diary.notes.get(i).getDate().equals(txtDatum.getText())){
-				varninglbl.setText("Ilyened mï¿½r van, csak mï¿½dosï¿½tani lehet");		
+				varninglbl.setText("Ilyened már van, csak módosítani lehet");		
 				talalat=1;
 			}
 			
 		}
 		if (talalat==0) {
 			txtNote.setText("");
-			txtDatum.setText("ï¿½ï¿½ï¿½ï¿½.hh.nn.");
-			varninglbl.setText("Hozzï¿½adva");
+			txtDatum.setText("éééé.hh.nn.");
+			varninglbl.setText("Hozzáadva");
 		diary.addNote(uj);	
 		try {
 			diary.saveToFile("note.txt");
@@ -180,21 +180,21 @@ public class DiaryView extends JFrame {
 		getContentPane().add(mainPanel, "mainpanel");
 		
 		
-		JButton btnNewButton = new JButton("Jegyzet hozzï¿½adï¿½sa");
+		JButton btnNewButton = new JButton("Jegyzet hozzáadása");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CardLayout cl
 				= (CardLayout)(getContentPane().getLayout());
 			    cl.show(getContentPane(), "notepanel");
-			    txtNote.setText("ï¿½rd be a jegyzeted");
-			    txtDatum.setText("ï¿½ï¿½ï¿½ï¿½.hh.nn."); //efefed
+			    txtNote.setText("Írd be a jegyzeted");
+			    txtDatum.setText("éééé.hh.nn."); //efefed
 			    varninglbl.setText("");
 			    
 			}
 			
 		});
 		
-		JButton btnJegyzetekKeresse = new JButton("Jegyzetek keres\u00E9se");
+		JButton btnJegyzetekKeresse = new JButton("Jegyzetek keresése");
 		btnJegyzetekKeresse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CardLayout cl
@@ -209,7 +209,7 @@ public class DiaryView extends JFrame {
 		
 		
 		
-		JButton btnKilps = new JButton("Kil\u00E9p\u00E9s");
+		JButton btnKilps = new JButton("Kilépés");
 		btnKilps.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {

@@ -3,7 +3,7 @@ package Mylittlediary.view;
 import static org.junit.Assert.*;
 
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.Test; 
 
 public class testvw {
 
@@ -15,15 +15,15 @@ public class testvw {
 		
 		
 		//txtDatum
-		Assert.assertEquals("éééé.hh.nn." , dv.txtDatum.getText());
-		
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
+		Assert.assertEquals("éééé.hh.nn." , dv.txtDatum.getText());  
+		 
+		//try {
+			Thread.sleep(5000);   //5 mp van belekattintani a txtDatum mezobe, hogy ellenorizzuk h eltunik e mintas belole
+		//} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		Assert.assertEquals("" , dv.txtDatum.getText());   //hozzáadáskot a dátum mezõn kattintva eltûnik az "éééé.hh.nn."
+		//	e.printStackTrace();
+		//}
+		Assert.assertEquals("" , dv.txtDatum.getText());   //hozzÃ¡adÃ¡skot a dÃ¡tum mezÅ‘n kattintva eltÅ±nik az "Ã©Ã©Ã©Ã©.hh.nn."
 	}
 
 }

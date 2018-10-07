@@ -13,12 +13,12 @@ public class test3 {
 		dv.setVisible(true);
 		dv.setBounds(100, 100, 500, 500);
 		
-		try {
+		//try {
 			Thread.sleep(5000);
-		} catch (InterruptedException e) {
+		//} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		//	e.printStackTrace();
+		//}
 
 		Assert.assertEquals("Ilyened már van, csak módosítani lehet" , dv.varninglbl.getText()); //figyelmeztet ha már an ehhez a naphoz adott bejegyzés
 	}                                                                                            //2x a hozzáad gombra
